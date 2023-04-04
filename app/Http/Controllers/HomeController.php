@@ -31,7 +31,7 @@ class HomeController extends Controller
         $task->created_by=auth()->id();
         $task->status=' ';
         $task->save();
-        return redirect('tasks');
+        return redirect()->back();
     }
 }
 

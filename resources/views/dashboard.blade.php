@@ -1,28 +1,28 @@
 @extends('layouts.app')
-    @section('content')
-            <!-- -------------------------------------------------------------- -->
-            <!-- Container fluid  -->
-            <!-- -------------------------------------------------------------- -->
-            <div class="container-fluid">
-                        <!-- -------------------------------------------------------------- -->
-                        <!-- Bread crumb and right sidebar toggle -->
-                        <!-- -------------------------------------------------------------- -->
-                        <div class="row page-titles">
-                            <div class="col-md-5 col-12 align-self-center">
-                                <h3 class="text-themecolor mb-0">Dashboard</h3>
-                            </div>
-                            <div class="col-md-7 col-12 align-self-center d-none d-md-flex justify-content-end">
-                                <ol class="breadcrumb mb-0 p-0 bg-transparent">
-                                    <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                    <li class="breadcrumb-item active d-flex align-items-center">Dashboard</li>
-                                </ol>
-                            </div>
-                        </div>
-                        <!-- -------------------------------------------------------------- -->
-                        <!-- End Bread crumb and right sidebar toggle -->
-                        <!-- -------------------------------------------------------------- -->
-                        <!-- Sales Overview -->
-                        {{-- <div class="card">
+@section('content')
+<!-- -------------------------------------------------------------- -->
+<!-- Container fluid  -->
+<!-- -------------------------------------------------------------- -->
+<div class="container-fluid">
+    <!-- -------------------------------------------------------------- -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="row page-titles">
+        <div class="col-md-5 col-12 align-self-center">
+            <h3 class="text-themecolor mb-0">Dashboard</h3>
+        </div>
+        <div class="col-md-7 col-12 align-self-center d-none d-md-flex justify-content-end">
+            <ol class="breadcrumb mb-0 p-0 bg-transparent">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item active d-flex align-items-center">Dashboard</li>
+            </ol>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- Sales Overview -->
+    {{-- <div class="card">
                             <div class="card-body">
                                 <div class="d-lg-flex">
                                     <div>
@@ -65,55 +65,49 @@
                                 <div id="Sales-Overview"></div>
                             </div>
                         </div> --}}
-                        <!-- End Sales Overview -->
-                        <!-- Row Cards -->
-                        <div class="row">
-                            <div class="col-lg-4 d-flex align-items-stretch">
-                                <div class="card w-100">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="me-3 align-self-center"><span
-                                                    class="lstick d-inline-block align-middle me-3"></span><img
-                                                    src="../assets/images/icon/income.png" alt="Income" /></div>
-                                            <div class="align-self-center">
-                                                <h6 class="text-muted mt-2 mb-0">Total Tasks</h6>
-                                                <h2>{{ App\Models\Task::get()->count() }}</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 d-flex align-items-stretch">
-                                <div class="card w-100">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="me-3 align-self-center"><span
-                                                    class="lstick d-inline-block align-middle me-3"></span><img
-                                                    src="../assets/images/icon/expense.png" alt="Income" /></div>
-                                            <div class="align-self-center">
-                                                <h6 class="text-muted mt-2 mb-0">Total Groups</h6>
-                                                {{-- <h2>{{ App\Models\TaskGroup::get()->count() }}</h2> --}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 d-flex align-items-stretch">
-                                <div class="card w-100">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="me-3 align-self-center"><span
-                                                    class="lstick d-inline-block align-middle me-3"></span><img
-                                                    src="../assets/images/icon/expense.png" alt="Income" /></div>
-                                            <div class="align-self-center">
-                                                <h6 class="text-muted mt-2 mb-0">Completed Tasks</h6>
-                                                {{-- <h2>{{ App\Models\Task::where('status',1)->get()->count() }}</h2> --}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- <div class="col-lg-4 d-flex align-items-stretch">
+    <!-- End Sales Overview -->
+    <!-- Row Cards -->
+    <div class="row">
+        <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <div class="me-3 align-self-center"><span class="lstick d-inline-block align-middle me-3"></span><img src="../assets/images/icon/income.png" alt="Income" /></div>
+                        <div class="align-self-center">
+                            <h6 class="text-muted mt-2 mb-0">Total Tasks</h6>
+                            <h2>{{ App\Models\Task::get()->count() }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <div class="me-3 align-self-center"><span class="lstick d-inline-block align-middle me-3"></span><img src="../assets/images/icon/expense.png" alt="Income" /></div>
+                        <div class="align-self-center">
+                            <h6 class="text-muted mt-2 mb-0">Total Groups</h6>
+                            {{-- <h2>{{ App\Models\TaskGroup::get()->count() }}</h2> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <div class="me-3 align-self-center"><span class="lstick d-inline-block align-middle me-3"></span><img src="../assets/images/icon/expense.png" alt="Income" /></div>
+                        <div class="align-self-center">
+                            <h6 class="text-muted mt-2 mb-0">Completed Tasks</h6>
+                            {{-- <h2>{{ App\Models\Task::where('status',1)->get()->count() }}</h2> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- <div class="col-lg-4 d-flex align-items-stretch">
                                 <div class="card w-100">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -128,10 +122,10 @@
                                     </div>
                                 </div>
                             </div> --}}
-                        </div>
-                        <!-- End Row Cards -->
-                        <!-- Project of the month -->
-                        {{-- <div class="card">
+    </div>
+    <!-- End Row Cards -->
+    <!-- Project of the month -->
+    {{-- <div class="card">
                             <div class="card-body">
                                 <div class="d-md-flex">
                                     <div>
@@ -254,9 +248,9 @@
                                 </div>
                             </div>
                         </div> --}}
-                        <!-- End Project of the month -->
-                        <!-- Row Starts -->
-                        {{-- <div class="row">
+    <!-- End Project of the month -->
+    <!-- Row Starts -->
+    {{-- <div class="row">
                             <div class="col-lg-7">
                                 <div class="card">
                                     <div class="card-body">
@@ -529,9 +523,9 @@
                                 </div>
                             </div>
                         </div> --}}
-                        <!-- Row ends -->
-                        <!-- Row Starts -->
-                        {{-- <div class="row">
+    <!-- Row ends -->
+    <!-- Row Starts -->
+    {{-- <div class="row">
                             <div class="col-lg-4 d-flex align-items-stretch">
                                 <div class="card w-100">
                                     <div class="card-body">
@@ -590,78 +584,91 @@
                                 </div>
                             </div>
                         </div> --}}
-                        <!-- Row ends -->
-                        <!-- Row starts -->
-                        <div class="row">
-                            <div class="col-lg-12 d-flex align-items-stretch">
-                                <div class="card w-100">
-                                    <div class="card-body">
-                                        <div class="d-md-flex align-items-center">
-                                            <div>
-                                                <h4 class="card-title"><span
-                                                        class="lstick  d-inline-block align-middle"></span>To Do list
-                                                </h4>
-                                                <h6 class="card-subtitle mb-0">List of your next task to complete</h6>
-                                            </div>
-                                            {{-- <div class="ms-auto mt-3 mt-md-0">
-                                                <button class="btn btn-sm btn-rounded btn-success" data-bs-toggle="modal"
-                                                    data-bs-target="#myModal">Add Task</button>
-                                            </div> --}}
-                                        </div>
+    <!-- Row ends -->
+    <!-- Row starts -->
+    <div class="row">
+        <div class="col-lg-12 d-flex align-items-stretch">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-md-flex align-items-center">
+                        <div>
+                            <h4 class="card-title"><span class="lstick  d-inline-block align-middle"></span>To Do list
+                            </h4>
+                            <h6 class="card-subtitle mb-0">List of your next task to complete</h6>
+                        </div>
+                        <div class="ms-auto mt-3 mt-md-0">
+                            <button class="btn btn-sm btn-rounded btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Add Task</button>
+                        </div>
+                    </div>
 
-                                        <!-- -------------------------------------------------------------- -->
-                                        <!-- To do list widgets -->
-                                        <!-- -------------------------------------------------------------- -->
-                                        <div class="to-do-widget mt-3 common-widget">
-                                            <!-- .modal for add task -->
-                                            {{-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-                                                aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header d-flex">
-                                                            <h4 class="modal-title">Add Task</h4>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <form>
-                                                                <div class="mb-3">
-                                                                    <label>Task name</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Enter Task Name"> </div>
-                                                                <div class="mb-3">
-                                                                    <label>Assign to</label>
-                                                                    <select
-                                                                        class="form-select">
-                                                                        <option selected="">Sachin</option>
-                                                                        <option value="1">Sehwag</option>
-                                                                    </select>
+                    <!-- -------------------------------------------------------------- -->
+                    <!-- To do list widgets -->
+                    <!-- -------------------------------------------------------------- -->
+                    <div class="to-do-widget mt-3 common-widget">
+                        <!-- .modal for add task -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header d-flex">
+                                        <h4 class="modal-title">Add Task</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="{{ url('storeTask') }}">
+                                            @csrf
+                                            <div class="modal-body">
+                                                <div class="compose-box">
+                                                    <div class="compose-content" id="addTaskModalTitle">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="d-flex mail-to mb-4">
+                                                                    <div class="w-100">
+                                                                        <label for="">Task Title</label>
+                                                                        <input id="task" type="text" placeholder="Title" class="form-control mb-1" name="title" required />
+                                                                        <label for="">Description</label>
+                                                                        <textarea name="description" placeholder="Description" class="form-control mb-2" id="" cols="30" rows="3" required></textarea>
+                                                                        <label for="">Due Date </label>
+                                                                        <input type="date" placeholder="Due Date" class="form-control mb-2" name="dueDate" required />
+                                                                        <label for="">Starting Time</label>
+                                                                        <input type="time" name="startTime" id="" class="form-control mb-2" required>
+                                                                        <label for="">Ending Time</label>
+                                                                        <input type="time" name="endTime" id="" class="form-control mb-2" required>
+                                                                        <label for="">Assigning To</label>
+                                                                        <input type="text" name="assign" id="" class="form-control mb-2" required>
+
+                                                                    </div>
                                                                 </div>
-                                                            </form>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-bs-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-success"
-                                                                data-bs-dismiss="modal">Submit</button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <!-- /.modal-content -->
                                                 </div>
-                                                <!-- /.modal-dialog -->
-                                            </div> --}}
-                                            <!-- /.modal -->
-                                            <ul class="list-task todo-list list-group mb-0" data-role="tasklist">
-                                                @foreach (App\Models\Task::get() as $tsk)
-                                                <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
-                                                    data-role="task">
-                                                    <div class="form-check form-check-inline w-100">
-                                                        <input type="checkbox" class="form-check-input danger check-light-danger"
-                                                            id="inputSchedule" name="inputCheckboxesSchedule">
-                                                        <label for="inputSchedule" class="form-check-label font-weight-medium"> <span>{{ $tsk->title }}</span><span
-                                                                class="badge bg-danger badge-pill ms-1">Today</span>
-                                                        </label>
-                                                    </div>
-                                                    {{-- <ul class="assignedto list-style-none m-0 ps-4 ms-1 mt-1">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger" data-bs-dismiss="modal">
+                                                    <i class="ri-close-fill align-middle"></i> Discard
+                                                </button>
+                                                <button type="submit" class="btn btn-info">
+                                                    Add Task
+                                                </button>
+                                                {{-- <button type="submit" class="btn btn-success edit-tsk">Add</button> --}}
+                                            </div>
+                                        </form>
+                                    </div>
+                                   </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+                        <ul class="list-task todo-list list-group mb-0" data-role="tasklist">
+                            @foreach (App\Models\Task::get() as $tsk)
+                            <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0" data-role="task">
+                                <div class="form-check form-check-inline w-100">
+                                    <input type="checkbox" class="form-check-input danger check-light-danger" id="inputSchedule" name="inputCheckboxesSchedule">
+                                    <label for="inputSchedule" class="form-check-label font-weight-medium"> <span>{{ $tsk->title }}</span><span class="badge bg-danger badge-pill ms-1">Today</span>
+                                    </label>
+                                </div>
+                                {{-- <ul class="assignedto list-style-none m-0 ps-4 ms-1 mt-1">
                                                         <li class="d-inline-block border-0 me-1"><img
                                                                 src="../assets/images/users/1.jpg" alt="user"
                                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
@@ -683,10 +690,10 @@
                                                                 data-original-title="Selina" class="rounded-circle">
                                                         </li>
                                                     </ul> --}}
-                                                </li>
+                            </li>
 
-                                                @endforeach
-                                                {{-- <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
+                            @endforeach
+                            {{-- <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
                                                     data-role="task">
                                                     <div class="form-check form-check-inline w-100">
                                                         <input type="checkbox" id="inputCall" class="form-check-input info check-light-info"
@@ -710,7 +717,7 @@
                                                         </li>
                                                     </ul>
                                                 </li> --}}
-                                                {{-- <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
+                            {{-- <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
                                                     data-role="task">
                                                     <div class="form-check form-check-inline w-100">
                                                         <input type="checkbox" id="inputBook" class="form-check-input primary check-light-primary"
@@ -723,7 +730,7 @@
                                                     </div>
                                                     <div class="fs-2 ps-3 d-inline-block ms-2"> 26 jun 2021</div>
                                                 </li> --}}
-                                                {{-- <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
+                            {{-- <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
                                                     data-role="task">
                                                     <div class="form-check form-check-inline w-100">
                                                         <input type="checkbox" id="inputForward" class="form-check-input warning check-light-warning"
@@ -735,7 +742,7 @@
                                                     </div>
                                                     <div class="fs-2 ps-3 d-inline-block ms-2"> 26 jun 2021</div>
                                                 </li> --}}
-                                                {{-- <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
+                            {{-- <li class="list-group-item border-0 mb-0 py-3 pe-3 ps-0"
                                                     data-role="task">
                                                     <div class="form-check form-check-inline w-100">
                                                         <input type="checkbox" id="inputRecieve" class="form-check-input success check-light-success"
@@ -764,12 +771,12 @@
                                                         </li>
                                                     </ul>
                                                 </li> --}}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- <div class="col-lg-4 d-flex align-items-stretch">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- <div class="col-lg-4 d-flex align-items-stretch">
                                 <div class="card w-100">
                                     <img class="card-img-top blog-img1" src="../assets/images/big/img1.jpg"
                                         alt="Card image cap">
@@ -792,7 +799,7 @@
                                     </div>
                                 </div>
                             </div> --}}
-                        </div>
-                        <!-- Row ends -->
-                    </div>
+    </div>
+    <!-- Row ends -->
+</div>
 @endsection
